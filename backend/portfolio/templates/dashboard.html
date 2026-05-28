@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0b1220;
+            color: white;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #06b6d4;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #06b6d4;
+        }
+
+        .number {
+            font-size: 40px;
+            color: #06b6d4;
+            font-weight: bold;
+        }
+
+        .label {
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        @media(max-width: 768px){
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Portfolio Admin Dashboard</h1>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="number">{{ home }}</div>
+            <div class="label">Home Section</div>
+        </div>
+
+        <div class="card">
+            <div class="number">{{ about }}</div>
+            <div class="label">About Section</div>
+        </div>
+
+        <div class="card">
+            <div class="number">{{ skills }}</div>
+            <div class="label">Skills</div>
+        </div>
+
+        <div class="card">
+            <div class="number">{{ tools }}</div>
+            <div class="label">Tools</div>
+        </div>
+
+        <div class="card">
+            <div class="number">{{ experience }}</div>
+            <div class="label">Experience</div>
+        </div>
+
+        <div class="card">
+            <div class="number">{{ projects }}</div>
+            <div class="label">Projects</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
