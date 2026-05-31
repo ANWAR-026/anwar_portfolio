@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
+ const BASE_URL = "https://anwar-portfolio-1.onrender.com";
 
 function About() {
   const [about, setAbout] = useState(null);
@@ -73,20 +74,21 @@ function About() {
               "
             >
 
-              <img
-                src={about.about_image}
-                alt="profile"
-                className="
-                  w-full
-                  h-full
-                  object-cover
-                  rounded-full
-                  border-[4px]
-                  border-white
-                  hover:scale-105
-                  transition duration-500
-                "
-              />
+               {/* IMAGE ONLY FIXED */}
+      <img
+         src={`https://anwar-portfolio-1.onrender.com${about.about_image}`}
+        alt="profile"
+        className="
+          w-full
+          h-full
+          object-cover
+          rounded-full
+          border-[4px]
+          border-white
+          hover:scale-105
+          transition duration-500
+        "
+      />
 
             </div>
 

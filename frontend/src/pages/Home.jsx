@@ -3,6 +3,9 @@ import API from "../services/api";
 import Layout from "../components/Layout";
 import { motion } from "framer-motion";
 
+//const imageUrl = "https://anwar-portfolio-1.onrender.com" + data.home_image;
+
+
 function Home() {
   const [home, setHome] = useState([]);
 
@@ -73,7 +76,7 @@ function Home() {
                 ">
 
                   <a
-                    href={data.cv_download}
+                     href={`https://anwar-portfolio-1.onrender.com${data.cv_download}`}
                     target="_blank"
                     className="
                       bg-blue-700 hover:bg-blue-800
@@ -123,13 +126,10 @@ function Home() {
                   hover:scale-105 transition duration-300
                   bg-white
                 ">
-
-                  <img
-                    src={data.home_image}
-                    alt="profile"
-                    className="w-full h-[420px] object-cover"
-                  />
-
+ <img
+             src={`https://anwar-portfolio-1.onrender.com${data.home_image}`}
+            className="w-full h-[420px] object-cover"
+          />
                 </div>
 
               </motion.div>
